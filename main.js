@@ -79,8 +79,8 @@ class Game extends Phaser.Scene
         if (allEqual(ListMap)){
             this.add.rectangle(0,0,gamewidth,gameheight,0x501010).setOrigin(0)
             var fontsize = gamewidth/12
-            centeredtext(-30,"Game Over, "+ListMap[0]+" wins",fontsize,this)
-            centeredtext(30,"Click to restart",fontsize,this)
+            centeredtext(fontsize/2,"Game Over, "+ListMap[0]+" wins",fontsize,this)
+            centeredtext(-fontsize/2,"Click to restart",fontsize,this)
             this.input.on('pointerdown', () => this.scene.restart())
 
             console.log("game over")
